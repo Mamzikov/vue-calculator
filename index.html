@@ -9,8 +9,8 @@
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/main-page.css" type="text/css">
   <link rel="stylesheet" href="css/vendor/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="js/TweenLite.min.js"></script>
   <script type="text/javascript" src="js/vue.min.js"></script>
-  <script type="text/javascript" src="js/main-page.js"></script>
   <title>Калькулятор на Vue.js</title>
 </head>
 
@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-md-4 col-12">
                   <div class="Calculator__top-control-item Calculator__top-control-select">
-                    <select class="Calculator__select">
+                    <select v-model="viewedCategories.typeService" class="Calculator__select custom-select">
                       <option value="Лазерная эпиляция">Лазерная эпиляция</option>
                       <option value="Другая эпиляция">Другая эпиляция</option>
                     </select>
@@ -77,7 +77,6 @@
                                 <span class="NewPrice">&nbsp;{{service.price | number}}р.</span>
                               </div>
                             </div>
-                            <img class="Calculator__price-image" v-bind:src="service.image" />
                           </div>
                         </label>
                       </div>
@@ -131,7 +130,6 @@
                     <span v-if="amountOldPrice > amountPrice" class="strike-color"><span class="OldPrice">{{animatedOldPrice | number}}р.</span></span>
                     <p v-if="amountOldPrice > amountPrice" class="Calculator__total-profit">ваша выгода составит {{(amountOldPrice - amountPrice) | number}}р.</p>
                   </div>
-                  <button class="Button Button--dark">Записаться</button>
                 </div>
               </transition>
             </div>
@@ -141,4 +139,5 @@
     </div>
   </main>
 </body>
+<script type="text/javascript" src="js/main-page.js"></script>
 </html>

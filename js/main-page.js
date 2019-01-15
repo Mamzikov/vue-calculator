@@ -6,7 +6,6 @@
       name: 'Грудь',
       price: 2000,
       oldPrice: 3500,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -21,7 +20,6 @@
       name: 'Подмышечная впадина',
       price: 2300,
       oldPrice: 3000,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -36,7 +34,6 @@
       name: 'Ореолы сосков',
       price: 2800,
       oldPrice: 3100,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -51,7 +48,6 @@
       name: 'Область живота',
       price: 2250,
       oldPrice: 0,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -66,7 +62,6 @@
       name: 'Глубокое бикини',
       price: 250,
       oldPrice: 500,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Другая эпиляция',
@@ -81,7 +76,6 @@
       name: 'Классическое бикини',
       price: 850,
       oldPrice: 1000,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -96,7 +90,6 @@
       name: 'Белая линия живота',
       price: 3250,
       oldPrice: 4000,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -111,7 +104,6 @@
       name: 'Руки полностью',
       price: 1250,
       oldPrice: 1500,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -126,7 +118,6 @@
       name: 'Кисти рук',
       price: 1850,
       oldPrice: 1900,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -141,7 +132,6 @@
       name: 'Предплечья',
       price: 1850,
       oldPrice: 1900,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -156,7 +146,6 @@
       name: 'Спина',
       price: 1850,
       oldPrice: 1900,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Другая эпиляция',
@@ -171,7 +160,6 @@
       name: 'Шея',
       price: 1950,
       oldPrice: 2100,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Другая эпиляция',
@@ -186,7 +174,6 @@
       name: 'Спина',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Другая эпиляция',
@@ -201,7 +188,6 @@
       name: 'Поясница',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Другая эпиляция',
@@ -216,7 +202,6 @@
       name: 'Уши',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Другая эпиляция',
@@ -231,7 +216,6 @@
       name: 'Ноги полностью',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Другая эпиляция',
@@ -246,7 +230,6 @@
       name: 'Ягодицы',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Другая эпиляция',
@@ -262,7 +245,6 @@
       name: 'Бедра',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -277,7 +259,6 @@
       name: 'Голени',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Другая эпиляция',
@@ -292,7 +273,6 @@
       name: 'Колено',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -307,7 +287,6 @@
       name: 'Стопы',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'wooman',
         typeService: 'Лазерная эпиляция',
@@ -322,7 +301,6 @@
       name: 'Грудь',
       price: 2000,
       oldPrice: 3500,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Лазерная эпиляция',
@@ -337,7 +315,6 @@
       name: 'Подмышечная впадина',
       price: 2300,
       oldPrice: 3000,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Лазерная эпиляция',
@@ -352,7 +329,6 @@
       name: 'Ореолы сосков',
       price: 2800,
       oldPrice: 3100,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Другая эпиляция',
@@ -367,7 +343,6 @@
       name: 'Область живота',
       price: 2250,
       oldPrice: 0,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Другая эпиляция',
@@ -382,7 +357,6 @@
       name: 'Глубокое бикини',
       price: 250,
       oldPrice: 500,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Другая эпиляция',
@@ -397,7 +371,6 @@
       name: 'Классическое бикини',
       price: 850,
       oldPrice: 1000,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Лазерная эпиляция',
@@ -412,7 +385,6 @@
       name: 'Белая линия живота',
       price: 3250,
       oldPrice: 3500,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Лазерная эпиляция',
@@ -427,7 +399,6 @@
       name: 'Руки полностью',
       price: 1250,
       oldPrice: 1500,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Другая эпиляция',
@@ -442,7 +413,6 @@
       name: 'Кисти рук',
       price: 1850,
       oldPrice: 1900,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Лазерная эпиляция',
@@ -457,7 +427,6 @@
       name: 'Предплечья',
       price: 1850,
       oldPrice: 1900,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Лазерная эпиляция',
@@ -472,7 +441,6 @@
       name: 'Спина',
       price: 1850,
       oldPrice: 1900,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Другая эпиляция',
@@ -487,7 +455,6 @@
       name: 'Шея',
       price: 1950,
       oldPrice: 2100,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Другая эпиляция',
@@ -502,7 +469,6 @@
       name: 'Спина',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Лазерная эпиляция',
@@ -517,7 +483,6 @@
       name: 'Поясница',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Другая эпиляция',
@@ -532,7 +497,6 @@
       name: 'Уши',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Другая эпиляция',
@@ -547,7 +511,6 @@
       name: 'Ноги полностью',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Лазерная эпиляция',
@@ -562,7 +525,6 @@
       name: 'Ягодицы',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Другая эпиляция',
@@ -577,7 +539,6 @@
       name: 'Бедра',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Другая эпиляция',
@@ -592,7 +553,6 @@
       name: 'Голени',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Другая эпиляция',
@@ -607,7 +567,6 @@
       name: 'Колено',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Лазерная эпиляция',
@@ -622,7 +581,6 @@
       name: 'Стопы',
       price: 950,
       oldPrice: 1100,
-      image: 'img/pod.png',
       categories: {
         gender: 'man',
         typeService: 'Лазерная эпиляция',
