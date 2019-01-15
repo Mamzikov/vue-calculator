@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/main-page.css" type="text/css">
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="js/vue.min.js"></script>
+  <script type="text/javascript" src="js/main-page.js"></script>
+  <title>Калькулятор на Vue.js</title>
+</head>
+
+<body>
+  <main class="Main">
+    <div class="Calculator">
+      <div class="Wrapper">
+        <form class="Form">
+          <div class="container">
+            <h2 class="Calculator__header text-center">Калькулятор</h2>
+            <div class="Calculator__top-control">
+              <div class="row align-items-center">
+                <div class="col-md-4 col-12">
+                  <div class="Calculator__top-control-item">
+                    <label class="Calculator__top-control-button Form__radio-container" for="genderWooman" v-bind:class="{isActive: viewedCategories.gender == 'wooman'}">
+                      Женщина <input id="genderWooman" type="radio" v-model="viewedCategories.gender" value="wooman" class="Radio-custom">
+                    </label>
+                    <label class="Calculator__top-control-button Form__radio-container" for="genderMan" v-bind:class="{isActive: viewedCategories.gender == 'man'}">
+                      Мужчина <input id="genderMan" type="radio" v-model="viewedCategories.gender" value="man" class="Radio-custom">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-4 col-12">
+                  <div class="Calculator__top-control-item">
+                    <label class="Calculator__top-control-button Form__radio-container" for="zoneFace" v-bind:class="{isActive: viewedCategories.zone == 'face'}">
+                      Лицо <input name="zone" id="zoneFace" type="radio" v-model="viewedCategories.zone" value="face" class="Radio-custom">
+                    </label>
+                    <label class="Calculator__top-control-button Form__radio-container" for="zoneBody" v-bind:class="{isActive: viewedCategories.zone == 'body'}">
+                      Тело <input name="zone" id="zoneBody" type="radio" v-model="viewedCategories.zone" value="body" class="Radio-custom">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-4 col-12">
+                  <div class="Calculator__top-control-item Calculator__top-control-select">
+                    <select class="Calculator__select js-custom-select">
+                      <option value="Лазерная эпиляция">Лазерная эпиляция</option>
+                      <option value="Другая эпиляция">Другая эпиляция</option>
+                    </select>
+                    <div class="js-select-calculator-options"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Calculator__services-box">
+            <div class="container">
+              <div class="Calculator__services">
+                <div class="row Calculator__services-list">
+                  <div v-for="(service, index) in filteredServices" :key="service.id" v-bind:class="{isSelected: service.viewOptions.isSelected}" class="col-md-4 col-12 Calculator__services-item">
+                    <div class="Calculator__services-checkbox Form__checkbox">
+                      <div class="Form__custom-checkbox">
+                        <label class="Form__checkbox-container Form__checkbox-container--left" v-bind:for="'Checkbox-price-' + index">
+                          <div class="Calculator__price-value">
+                            <input type="checkbox" class="Checkbox-custom" v-model="service.viewOptions.isSelected" v-bind:name="'check' + index" value="1" v-bind:id="'Checkbox-price-'  + index">
+                            <div class="Form__checkbox-icons">
+                              <span class="Form__checkbox-icon Form__checkbox-icon--checked">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.14 7.8" width="10" height="8">
+                                  <path fill="#fff" d="M.117,7.29a.377.377,0,0,1,0-.546L.663,6.2a.377.377,0,0,1,.546,0l.039.039,2.145,2.3a.188.188,0,0,0,.273,0L8.892,3.117h.039a.377.377,0,0,1,.546,0l.546.546a.377.377,0,0,1,0,.546h0l-6.24,6.474a.377.377,0,0,1-.546,0L.195,7.407.117,7.29Z" transform="translate(0 -3)" /></svg>
+                              </span>
+                            </div>
+                            <div class="Calculator__price-block">
+                              <span class="Calculator__price-name">{{service.name}}</span>
+                              <div class="Calculator__price">
+                                <span v-show="service.oldPrice > 0" class="strike-color"><span class="OldPrice">{{service.oldPrice | number}}р.</span></span>
+                                <span class="NewPrice">&nbsp;{{service.price | number}}р.</span>
+                              </div>
+                            </div>
+                            <img class="Calculator__price-image" v-bind:src="service.image" />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div v-for="(service, index) in selectedServices" :key="service.id" class="col-md-4 col-12 Calculator__count-wrapper">
+                    <div class="Calculator__count row justify-content-between">
+                      <div class="Calculator__count-name col-lg col-md-auto">
+                        <span>{{index + 1}}. {{service.name}}</span>
+                      </div>
+                      <div class="Calculator__count-price col-md-auto">
+                        {{service.price | number}}р.
+                      </div>
+                    </div>
+                    <div class="Calculator__number row justify-content-between">
+                      <div class="Calculator__number-name col-12 col-xl-auto">
+                        Выберите количество процедур:
+                      </div>
+                      <div class="Calculator__number-value col-12 col-xl-auto">
+                        <label class="Calculator__number-label Form__radio-container" v-bind:for="'Radio-service-' + index + '_1'">
+                          <input class="Radio-custom" v-model="service.viewOptions.count" v-bind:name="'num-service-' + index" v-bind:id="'Radio-service-' + index + '_1'" type="radio" checked value="1">
+                          <span class="Calculator__number-label-value">1</span>
+                        </label>
+                        <label class="Calculator__number-label Form__radio-container" v-bind:for="'Radio-service-' + index + '_3'">
+                          <input class="Radio-custom" v-model="service.viewOptions.count" v-bind:name="'num-service-' + index" v-bind:id="'Radio-service-' + index + '_3'" type="radio" value="3">
+                          <span class="Calculator__number-label-value">3</span>
+                        </label>
+                        <label class="Calculator__number-label Form__radio-container" v-bind:for="'Radio-service-' + index + '_5'">
+                          <input class="Radio-custom" v-model="service.viewOptions.count" v-bind:name="'num-service-' + index" v-bind:id="'Radio-service-' + index + '_5'" type="radio" value="5">
+                          <span class="Calculator__number-label-value">5</span>
+                        </label>
+                        <label class="Calculator__number-label Form__radio-container" v-bind:for="'Radio-service-' + index + '_8'">
+                          <input class="Radio-custom" v-model="service.viewOptions.count" v-bind:name="'num-service-' + index" v-bind:id="'Radio-service-' + index + '_8'" type="radio" value="8">
+                          <span class="Calculator__number-label-value">8</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Calculator__total-box">
+            <div class="container">
+              <transition name="fade">
+                <div class="Calculator__total text-center" v-if="amountPrice > 0">
+                  <div class="Calculator__total-sum">
+                    Итого: <span class="Calculator__total-value">{{animatedPrice | number}}</span>р.
+                    <span v-if="amountOldPrice > amountPrice" class="strike-color"><span class="OldPrice">{{animatedOldPrice | number}}р.</span></span>
+                    <p v-if="amountOldPrice > amountPrice" class="Calculator__total-profit">ваша выгода составит {{(amountOldPrice - amountPrice) | number}}р.</p>
+                  </div>
+                  <button class="Button Button--dark">Записаться</button>
+                </div>
+              </transition>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
